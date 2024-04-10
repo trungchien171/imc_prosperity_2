@@ -24,3 +24,14 @@ The challenge will start on April 8th, 2024 at 9:00 AM **UTC**. There are five r
 - **Round 3: April 14, 9:00 → April 17, 9:00**
 - **Round 4: April 17, 9:00 → April 20, 9:00**
 - **Round 5: April 20, 9:00 → April 23, 9:00**
+
+# Round 1
+
+## Algorithm challenge
+
+The first two tradable products are introduced: `STARFRUIT` and `AMETHYSTS`. While the value of the `AMETHYSTS` has been stable throughout the history of the archipelago, the value of `STARFRUIT` has been going up and down over time. Develop your initial trading strategy and write your first Python program to get off to a good start in this world of trading and market making. Even if the price of a product moves very little or in a very unpredictable way, there might still be clever ways to profit if you both buy and sell.
+
+Position limits for the newly introduced products:
+
+- `STARFRUIT`: 20
+- `AMETHYSTS`: 20
