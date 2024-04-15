@@ -1,24 +1,21 @@
 ## IMC Prosperity 2
-### Rounds
+The 15 days of simulation of Prosperity are divided into 5 rounds. Each round lasts 72 hours. At the end of every round - before the timer runs out - all teams will have to submit their algorithmic and manual trades to be processed. The algorithms will then participate in a full day of trading against the Prosperity trading bots.
+## Round 1
+We were given 2 products to trade named AMETHYSTS and STARFRUIT. We realized that AMETHYSTS prices are stable throughtout the history while the value for STARFRUIT had been going up and down over time. For AMETHYSTS, we did the market-take and market-make around the mean price. We adjusted for penny jumping, which means the bid and ask prices always be one penny better than the best prices in the order book to make the orders more competitive. For STARFRUIT, we ran a linear regression to predict next prices based on historical prices in the cache. we continued doing market-make and market take for the predicted price adjusted by a predefined spread. The algorithmic trading results were quite reasonably and we got a profit of 30k. The manual trading was straightforward, we got a profit of 46k but it was quite low in comparing with average benchmark. 
+ 
+At Round 1, we ended up with:
+- Rank #2178 in Overall
+- Rank #15 in Vietnam (National)
+- Rank #411 in Algorithmic trading
+- Rank #2467 in Manual trading
 
-The 15 days of simulation of Prosperity are divided into 5 rounds. Each round lasts 72 hours. At the end of every round - before the timer runs out - all teams will have to submit their algorithmic and manual trades to be processed. The algorithms will then participate in a full day of trading against the Prosperity trading bots. Note that all algorithms are trading separately, there is no interaction between the algorithms of different players. When a new round starts, the results of the previous round will be disclosed and the leaderboard will be updated accordingly. During the game, you can always visit previous rounds in the dashboard, to review information and results. But once a round is closed, you can no longer change your submitted trades for that round. When round 5 ends, the final results will be processed and the winner of the Prosperity trading challenge will be crowned “Prosperity Trading Tycoon”.
+## Round 2
+In round 2, a new product was introduced named "ORCHIDS". ORCHIDS are very delicate and their value is dependent on all sorts of observable factors like hours of sun light, humidity, shipping costs, in- & export tariffs and suitable storage space. To remain competitive and flexible in trading ORCHIDS, we set the dynamic price bounds around the calculated buy price incorporating with penny jumping. The purchase price was determined by adding the market ask to the sum of shipping cost and import tariff costs, indicating the total cost of acquiring the product. We also tried to improve our strategies for AMETHYSTS and STARFRUIT. For AMETHYSTS, we took the same trading logic as in round 1 but we predicted the future price instead of taking the mean price. We predicted the price using MACD and Volatility. Specifically, the MACD is calculated as the difference between the 12-period EMA and the 26-period EMA. We also had a 9-period EMA of the MACD itself, which is a signal line, acts as a trigger for buying and selling decisions. Then, we calculated the volatility of AMETHYSTS using the standard deviation of logarithmic returns. For the decision rules, if the MACD is positive (upward momentum) and the volatility is relatively low (we set it less than 5% of average price), the strategy predicts a 2% increase in price. Conversely, it predicts a 2% decrease. Otherwise, it predicts the price will remain stable around the last known price. For STARFRUIT, the method we used to predict the future price was by applying a smoothing constant to the price data. This gives more weight to recent observations while exponentially decreasing the weight for older observations. The smoothing level was set at 0.2 to control the rate at which the influence of older data decreases. The predicted price then was calculated as the last value from smoothing series. The manual trading in this round was to find the optimal profit for currency exchanging. Our sequence is Seashells -> Pizza -> Wasabi -> Seashells -> Pizza -> Seashells.
 
-### Algorithmic trading
+At Round 2 (accompany with results from the preceding round), we ended up with:
+- Rank #116 in Overall
+- Rank #2 in Vietnam (National)
+- Rank #67 in Algorithmic trading
+- Rank #1449 in Manual trading
 
-Every round contains an algorithmic trading challenge. You will have 72 hours to submit your (final) Python program. When the round ends, the last successfully processed submission will be locked in and processed for results.
-### Manual trading
-
-All rounds contain a manual trading challenge. Just like the algorithmic challenge, manual trading challenges last 72 hours to submit your (final) trade. When the round ends, the last submission will be locked in and processed for results. During the tutorial round, manual trading is inactive. Note that manual trades have no effect on your algorithmic trade and can be seen as separate challenges to gain additional profits. 
-
-# Round 1
-
-## Algorithm challenge
-
-The first two tradable products are introduced: `STARFRUIT` and `AMETHYSTS`. While the value of the `AMETHYSTS` has been stable throughout the history of the archipelago, the value of `STARFRUIT` has been going up and down over time. Develop your initial trading strategy and write your first Python program to get off to a good start in this world of trading and market making. Even if the price of a product moves very little or in a very unpredictable way, there might still be clever ways to profit if you both buy and sell.
-
-Position limits for the newly introduced products:
-
-- `STARFRUIT`: 20
-- `AMETHYSTS`: 20
-
-Results for round 1: Rank #411 global and Rank #15 Vietnam
+  ### Updating...
