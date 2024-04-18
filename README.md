@@ -5,7 +5,7 @@ We were given 2 products to trade named AMETHYSTS and STARFRUIT. We realized tha
  
 At Round 1, we ended up with:
 - Rank #2178 in Overall
-- Rank #15 in Vietnam (National)
+- Rank #15 in National (Vietnam)
 - Rank #411 in Algorithmic trading
 - Rank #2467 in Manual trading
 
@@ -14,7 +14,7 @@ In round 2, a new product was introduced named "ORCHIDS". ORCHIDS are very delic
 
 At Round 2 (accompany with results from the preceding round), we ended up with:
 - Rank #116 in Overall
-- Rank #2 in Vietnam (National)
+- Rank #2 in National (Vietnam)
 - Rank #67 in Algorithmic trading
 - Rank #1449 in Manual trading
 
